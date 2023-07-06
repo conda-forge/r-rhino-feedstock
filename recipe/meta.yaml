@@ -1,4 +1,4 @@
-{% set version = '1.3.1' %}
+{% set version = "1.4.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rhino_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rhino/rhino_{{ version }}.tar.gz
-  sha256: 88cce036bc740d21ecef3e55c379fd21312b42b6142a32db6dfa9ba50744d79c
+  sha256: e272edbd9fd1b26f0cc08a1d296bf157780fbd93c08fb4cc356fe9406ff0b8fe
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -69,8 +69,7 @@ test:
 about:
   home: https://appsilon.github.io/rhino/, https://github.com/Appsilon/rhino
   license: LGPL-3.0-only
-  summary: A framework that supports creating and extending enterprise Shiny applications using
-    best practices.
+  summary: A framework that supports creating and extending enterprise Shiny applications using best practices.
   license_family: LGPL
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-3
