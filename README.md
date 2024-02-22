@@ -3,11 +3,13 @@ About r-rhino-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rhino-feedstock/blob/main/LICENSE.txt)
 
-Home: https://appsilon.github.io/rhino/, https://github.com/Appsilon/rhino
+Home: https://appsilon.github.io/rhino/
 
 Package license: LGPL-3.0-only
 
 Summary: A framework that supports creating and extending enterprise Shiny applications using best practices.
+
+Development: https://github.com/Appsilon/rhino
 
 Current build status
 ====================
