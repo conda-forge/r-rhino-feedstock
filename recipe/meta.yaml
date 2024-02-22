@@ -26,7 +26,7 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-box
+    - r-box >=1.1.3
     - r-cli
     - r-config
     - r-fs
@@ -41,10 +41,11 @@ requirements:
     - r-styler
     - r-testthat >=3.0.0
     - r-withr
+    - r-xml2
     - r-yaml
   run:
     - r-base
-    - r-box
+    - r-box >=1.1.3
     - r-cli
     - r-config
     - r-fs
@@ -59,6 +60,7 @@ requirements:
     - r-styler
     - r-testthat >=3.0.0
     - r-withr
+    - r-xml2
     - r-yaml
 
 test:
@@ -67,7 +69,8 @@ test:
     - "\"%R%\" -e \"library('rhino')\""  # [win]
 
 about:
-  home: https://appsilon.github.io/rhino/, https://github.com/Appsilon/rhino
+  home: https://appsilon.github.io/rhino/
+  dev_url: https://github.com/Appsilon/rhino
   license: LGPL-3.0-only
   summary: A framework that supports creating and extending enterprise Shiny applications using best practices.
   license_family: LGPL
