@@ -1,4 +1,4 @@
-{% set version = "1.7.0" %}
+{% set version = "1.8.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rhino_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rhino/rhino_{{ version }}.tar.gz
-  sha256: 3fb3e6c52540c058d3daa56a2944d0fa78a0226af70b28e823ca95cd290f5dd5
+  sha256: 29f886f04fef96640a99bccc2e7a1a6ededa3b0cfa861f44d33b37bcf62a4eef
 
 build:
   merge_build_host: true  # [win]
@@ -22,11 +22,12 @@ build:
 
 requirements:
   build:
-    - {{ posix }}zip               # [win]
-    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - {{ posix }}zip             # [win]
+    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
   host:
     - r-base
     - r-box >=1.1.3
+    - r-box.linters >=0.9.1
     - r-cli
     - r-config
     - r-fs
@@ -46,6 +47,7 @@ requirements:
   run:
     - r-base
     - r-box >=1.1.3
+    - r-box.linters >=0.9.1
     - r-cli
     - r-config
     - r-fs
