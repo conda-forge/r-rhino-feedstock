@@ -1,4 +1,4 @@
-{% set version = "1.9.0" %}
+{% set version = "1.10.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rhino_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rhino/rhino_{{ version }}.tar.gz
-  sha256: 77f30c19dbe1351712f6aabd5c701043da103b3e4726c2206e71ea56ff10f468
+  sha256: 91ad188ddf1d882871ba17de50855dc2cd59da5af322f4283d601756a789186c
 
 build:
   merge_build_host: true  # [win]
