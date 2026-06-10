@@ -1,4 +1,4 @@
-{% set version = "1.11.0" %}
+{% set version = "1.12.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rhino_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rhino/rhino_{{ version }}.tar.gz
-  sha256: 812324277601c3987e864e2802641a504f0d663c3acdd1fe3f580a9bfacb0f7c
+  sha256: 986bcb4a3188d6352ae2e7cbd5587b47e141656db0335ed7cbb130e95a898bf3
 
 build:
   number: 0
